@@ -11,9 +11,9 @@ body {
     min-width: 100vh;
     background: #25252b;
 }
-.container {
+/* .container {
    padding-top: 5%;
-}
+} */
 .box {
     position: relative;
     width: 400px;
@@ -21,7 +21,22 @@ body {
     background: repeating-conic-gradient(from var(--a), #ff2770 0%, #ff2770 5%, transparent 5%, transparent 40%, #ff2770 50%);
     animation: animate 4s linear infinite;
     border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+#myForm {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 40px;
+    z-index: 10000;
+}
+
 @property --a {
     syntax: '<angle>';
     inherits: false;
@@ -50,7 +65,179 @@ body {
     content: '';
     position: absolute;
     inset: 4px;
-    background-image: url('./images/images.png');
+    
     border-radius: 15px;
     border: 8px solid #25252b;
+}
+
+/* for the form   */
+* {box-sizing: border-box}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.cool-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: 2px solid #3498db;
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s, color 0.2s;
+}
+
+.cool-button:hover {
+  transform: scale(1.1);
+  background-color: #2980b9;
+  border-color: #2980b9;
+  color: #f0f0f0;
+}
+/* Style for the card container */
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Image style */
+.card-img {
+  width: 100%;
+  height: auto;
+}
+
+/* Card content */
+.card-content {
+  padding: 20px;
+  background-color: #fff;
+}
+
+/* Title style */
+.card-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Text style */
+.card-text {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Button style */
+.card-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.card-btn:hover {
+  background-color: #2980b9;
+}
+/* Add this CSS to create a gradient animation */
+
+.gradient-bg {
+  width: 100%;
+  height: 300px; /* Adjust the height as needed */
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* Add this CSS to create the loader animation */
+
+.loader {
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 5px solid #fff;
+  width: 50px;
+  height: 50px;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
